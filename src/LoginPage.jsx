@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from "react";
-import Logo from "./assets/logo.png";
+import Logo from "./assets/logo.jpg";
 import axios from "axios";
 
 const LoginPage = () => {
@@ -175,10 +175,10 @@ const LoginPage = () => {
             src={Logo}
             alt="Growbii Logo"
             className="w-24 h-24"
-            style={{ borderRadius: "70%", width: "150px", height: "150px" }}
+            style={{ height: "100px" }}
           />
           <h1
-            style={{ font: "normal", fontSize: "20px", marginLeft: "-180px" }}
+            style={{ font: "normal", fontSize: "20px"}}
             className="text-xl font-bold mt-4"
           >
             Today's Attendance
@@ -192,7 +192,6 @@ const LoginPage = () => {
               <p
                 style={{
                   marginTop: "-10px",
-                  marginLeft: "-280px",
                   fontWeight: "bold",
                   marginBottom: "6px",
                 }}
@@ -210,7 +209,7 @@ const LoginPage = () => {
                 style={{ marginLeft: "-30px" }}
                 className="flex justify-between"
               >
-                <span>
+                <span style={{fontWeight:"bolder"}}>
                   Subject&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -218,15 +217,7 @@ const LoginPage = () => {
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Attendance
                 </span>
               </div>
-              <span style={{ color: "grey" }} className="text-sm text-gray-500">
-                07:00 am&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              </span>
+              <hr/>
               {
                 loading?
               <p>Loading...</p>
@@ -242,7 +233,7 @@ const LoginPage = () => {
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {item.present?"present":"absent"}
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {item.present?"Present":"Absent"}
                 </span>
               </div>
               <span style={{ color: "grey" }} className="text-sm text-gray-500">
@@ -254,6 +245,7 @@ const LoginPage = () => {
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               </span>
+              <hr/>
               </>
               )
               }
@@ -312,23 +304,21 @@ const LoginPage = () => {
             alt="Growbii Logo"
             className="w-24 h-24"
             style={{
-              borderRadius: "70%",
-              width: "150px",
-              height: "150px",
+              height: "100px",
               marginTop: "-80px",
             }}
           />
         </div>
 
         {/* Buttons */}
-        <div className="flex flex-col gap-6 w-80">
+        <div className="flex flex-col gap-6 w-50">
           <button
             onClick={navigateToTodaysAttendance}
             style={{
               backgroundColor: "black",
               color: "white",
               height: "40px",
-              width: "100%",
+              width: "60%",
               borderRadius: "5px",
               marginTop: "60px",
             }}
@@ -341,7 +331,7 @@ const LoginPage = () => {
               backgroundColor: "black",
               color: "white",
               height: "40px",
-              width: "100%",
+              width: "60%",
               borderRadius: "5px",
               marginTop: "30px",
             }}
@@ -353,7 +343,7 @@ const LoginPage = () => {
               backgroundColor: "black",
               color: "white",
               height: "40px",
-              width: "100%",
+              width: "60%",
               borderRadius: "5px",
               marginTop: "30px",
             }}
@@ -365,7 +355,7 @@ const LoginPage = () => {
               backgroundColor: "black",
               color: "white",
               height: "40px",
-              width: "100%",
+              width: "60%",
               borderRadius: "5px",
               marginTop: "30px",
             }}
@@ -381,7 +371,7 @@ const LoginPage = () => {
               backgroundColor: "transparent",
               color: "black",
               height: "40px",
-              width: "48%",
+              width: "28%",
               border: "1px solid black",
               borderRadius: "5px",
               marginTop: "30px",
@@ -396,7 +386,7 @@ const LoginPage = () => {
               backgroundColor: "black",
               color: "white",
               height: "40px",
-              width: "48%",
+              width: "28%",
               borderRadius: "5px",
             }}
           >
@@ -544,9 +534,8 @@ const LoginPage = () => {
           alt="Growbii Logo"
           className="w-24 h-24"
           style={{
-            borderRadius: "70%",
-            width: "150px",
-            height: "150px",
+            // width: "150px",
+            height: "100px",
             marginTop: "10px",
           }}
         />
@@ -620,7 +609,7 @@ const LoginPage = () => {
           }}
           disabled={loading}
         >
-          {loading?"Loading data plaese wait....":"Sign In"}
+          {loading?"Loading data please wait....":"Sign In"}
         </button>
         <div style={{ marginTop: "20px" }}>
           <a
