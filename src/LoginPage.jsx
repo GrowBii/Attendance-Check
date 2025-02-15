@@ -318,7 +318,7 @@ const LoginPage = () => {
               backgroundColor: "black",
               color: "white",
               height: "40px",
-              width: "60%",
+              width: "65%",
               borderRadius: "5px",
               marginTop: "60px",
             }}
@@ -331,7 +331,7 @@ const LoginPage = () => {
               backgroundColor: "black",
               color: "white",
               height: "40px",
-              width: "60%",
+              width: "65%",
               borderRadius: "5px",
               marginTop: "30px",
             }}
@@ -343,7 +343,7 @@ const LoginPage = () => {
               backgroundColor: "black",
               color: "white",
               height: "40px",
-              width: "60%",
+              width: "65%",
               borderRadius: "5px",
               marginTop: "30px",
             }}
@@ -355,7 +355,7 @@ const LoginPage = () => {
               backgroundColor: "black",
               color: "white",
               height: "40px",
-              width: "60%",
+              width: "65%",
               borderRadius: "5px",
               marginTop: "30px",
             }}
